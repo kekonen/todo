@@ -5,7 +5,8 @@ use storage::{FileStorage, Storage};
 // complete -C __d0ne_completion d0ne
 
 fn main() {
-    let s = FileStorage::new("~/todos.json");
+    let location = std::env::home_dir().map(|path| path.join("todo.json")).expect("No HOME dir found");
+    let s = FileStorage::new(location.to_str().unwrap_or("/tmp/todo.json"));
 
     let line = std::env::var("COMP_LINE").expect("No COMP_LINE");
 
