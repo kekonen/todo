@@ -23,6 +23,4 @@ fn main() {
     } else {
         println!("Everything is done!");
     }
-
-    
 }
