@@ -16,8 +16,7 @@ fn main() {
             let mut body = task.get_body().to_string();
             for hashtag in task.hashtags() {
                 let hashtagged = format!("#{}", hashtag);
-                let hashtagged_colored = hashtagged.yellow().to_string();
-                body = body.replace(&hashtagged, &hashtagged_colored);
+                body = body.replace(&hashtagged, &hashtagged.yellow().to_string());
             }
             println!("{}. {}", i+1, body);
         }
