@@ -22,8 +22,8 @@ name = "d0ne"
 path = "src/d0ne.rs"
 
 [[bin]]
-name = "what_todo"
-path = "src/what_todo.rs"
+name = "todos"
+path = "src/todos.rs"
 
 [[bin]]
 name = "__d0ne_completion"
